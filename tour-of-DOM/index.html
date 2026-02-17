@@ -23,7 +23,7 @@
     <header>
         <h1>This is my header, no banner.</h1>
     </header>
-    <main>
+    <main id="main-container">
         <section id="old-dhaka" class="songs">
             <h1>Welcome to my DOM</h1>
             <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit <span>oli goli</span>. Placeat a blanditiis repellat veritatis id exercitationem perspiciatis alias maxime modi voluptatem natus assumenda, adipisci perferendis odio <span>alias</span> ullam dolores facere error nemo.</p>
@@ -45,6 +45,15 @@
                 <li class="foreign">taco</li>
                 <li>yougurt</li>
             </ul>
+        </section>
+        <section id="player-container">
+            <h1>Players</h1>
+            <ul id="player-list">
+                <li>Messi</li>
+                <li>Ronaldo</li>
+                <li>Neymar</li>
+                <li>Mbappe</li>
+                <li>Haaland</li>
         </section>
     </main>
     <!-- JavaScript -->
@@ -70,7 +79,7 @@
         }
 
         const foodTitleH1= document.getElementById('food-title'); 
-        console.log(foodTitleH1.innerText)
+        // console.log(foodTitleH1.innerText)
 
 
         const foreignElements = document.getElementsByClassName("foreign");
@@ -90,7 +99,12 @@
             // console.log(span);
         }
 
+        const foodEliment = document.getElementById('food-title');
+
     </script>
     <script src="./js/hello.js"></script>
+    <script src="./js/css-in-js.js"></script>
+    <script src="./js/child.js"></script>
+    <script src="./js/append.js"></script>
 </body>
 </html>
