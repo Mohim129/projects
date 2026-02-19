@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+<body>
+    <header>
+        <h1>Hello World!</h1>
+    </header>
+
+    <main>
+        <!-- Option 1 for event handler -->
+        <button onclick="console.log(7)">Click Me</button>
+        <button onclick="console.log('Another one')">Click Me Too</button>
+        <input type="text"><br>
+
+        <!-- Option 2 for event handler -->
+        <button onclick="makeYellow()">Make Yellow</button>
+        <button onclick="makeRed()">Make Red</button>
+        <button onclick="makeRgb()">RGB</button>
+        <!-- Option 3 get element by id and then set onclick to a fucntion -->
+        <button id="btn-make-blue">Make Blue</button>
+        <button id="btn-make-green">Make Green</button>
+
+        <!-- Option 4 addEventListner -->
+
+        <button id="btn-purple">Make Purple</button>
+
+
+    </main>
+
+    <script>
+        // document.getElementById('btn-purple').addEventListener(){
+        //     //getElementById.addEventListener
+        //     document.getElementById('btn-purple').addEventListener('click', 
+        //     function makePurple(){
+
+        //     });
+        // 
+        document.getElementById('btn-purple').addEventListener('click',
+        function makePurple(){
+            document.body.style.backgroundColor = 'purple';
+        })
+
+
+
+
+
+        function makeYellow(){
+            document.body.style.backgroundColor = 'yellow';
+        }
+        function makeRed(){
+            document.body.style.backgroundColor = 'red';
+        }
+
+        const btnBlue = document.getElementById('btn-make-blue');
+        // console.log(btnBlue)
+        btnBlue.onclick = function makeBlue(){
+            document.body.style.backgroundColor = 'blue'
+        }
+        const btnGreen = document.getElementById("btn-make-green");
+
+        btnGreen.onclick = makeGreen;
+        function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        }
+
+        // RGB (not part of the course, just a joke text)
+        function makeRgb() {
+            let i = 1;
+
+            function loop() {
+                if (i >= 1000) return;
+            
+                if (i % 3 === 0) {
+                    document.body.style.backgroundColor = 'red';
+                } else if (i % 2 === 0) {
+                    document.body.style.backgroundColor = 'green';
+                } else {
+                    document.body.style.backgroundColor = 'blue';
+                }
+            
+                i++;
+                requestAnimationFrame(loop);
+            }
+        
+            loop();
+        }
+
+
+
+        
+    </script>
+
+    <script src="./js/events.js"></script>
+</body>
+</html>

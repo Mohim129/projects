@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+
+    <style>
+        body{
+            border: 2px solid gold;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        section{
+            border: 2px solid red;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        ol{
+            border: 2px solid blue;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        li{
+            border: 2px solid green;
+            border-radius: 8px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Explore Event bubble</h1>
+    <section id="list-container">
+        <h3>List of things</h3>
+        <ol id="item-list">
+            <li id="item-1">Lorem ipsum</li>
+            <li id="item-2">Iste corporis architecto</li>
+            <li id="item-3">Et error quis</li>
+            <li id="item-4">Qui praesentium consectetur</li>
+            <li id="item-5">Cum nulla eveniet </li>
+            <li id="item-6">Sed fuga soluta</li>
+        </ol>
+    </section>
+
+    <script src="./js/bubble.js"></script>
+</body>
+</html>
